@@ -1,71 +1,45 @@
 <div id="page-wrapper">
-
-      <!-- Header -->
-        <div id="header-wrapper">
-          <div id="header" class="container" style="padding-top: 100px;padding-bottom: 50px;">
-            <!-- Logo -->
-              <h1 id="logo">Calligaphy Book</a></h1>
-              <p>Pala. Please fill the forms below for the book.</p>
-              <strong>Click on the text you want to edit, type and just click outside or press enter.</strong>
-          </div>
-        </div>
-
-      <!-- Features -->
-<p id="notice"><%= notice %></p>
-
-        <div id="features-wrapper">
-          <section id="features" class="container">
-
-            <div class="row">
-
-              <% @posts.each do |post|%>
-              <div class="4u 12u(mobile)">
-                <!-- Feature -->
-                  <section>
-                    <%= image_tag post.image, class: "image featured", style: "margin-bottom: 10px;" %>
-                    <header>
-                      <h3><%= best_in_place post, :title %></h3>
-                      <h3><%= best_in_place post, :translation %></h3>
-                    </header>
-                    <p><%= best_in_place post, :content %></p>
-                  </section>
-              </div>
-              <% end %>
-            </div>
-          </section>
-        </div>
-
+<!-- Header -->
+  <div id="header-wrapper">
+    <div id="header" class="container" style="padding-top: 100px;padding-bottom: 50px;">
+      <!-- Logo -->
+      <h1 id="logo">Calligaphy Book</a></h1>
+      <p>Click on the text you want to edit, type and just click outside or press enter.</p>
     </div>
+  </div>
+
+<!-- Features -->
+  <div id="features-wrapper">
+    <section id="features" class="container">
+
+      <div class="row">
+
+        <% @posts.each do |post|%>
+        <div class="4u 12u(mobile)">
+          <!-- Feature -->
+            <section>
+              <%= post.id %><%= image_tag post.image, class: "image featured", style: "margin-bottom: 10px;" %>
+              <header>
+                <h3><%= best_in_place post, :title, place_holder: "TITLE IN ENGLISH: Click me to add content!" %></h3>
+                <p> <%= best_in_place post, :translation, place_holder: "TIBETAN PHONETICS: Click me to add content!" %></p>
+              </header>
+              <p><%= best_in_place post, :content, place_holder: "OPTIONAL DESCRIPTION: Click me to add content!" %></p>
+              <p><%= link_to 'Delete this image', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            </section>
+        </div>
+        <% end %>
+      </div>
+    </section>
+  </div>
+
+  <!-- Features -->
+
+  <div id="copyright" class="container">
+    <ul class="links">
+    <li><%= link_to 'Add image', new_post_path %></li>
+    <li><a href="http://github.com/vajradog">@vajradog</a></li>
+    </ul>
+  </div>
+</div>
 
 
-<h1>Listing Posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Title</th>
-      <th>Translation</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.image %></td>
-        <td><%= post.title %></td>
-        <td><%= post.translation %></td>
-        <td><%= post.content %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>

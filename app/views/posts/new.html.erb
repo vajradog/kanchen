@@ -1,5 +1,36 @@
-<h1>New Post</h1>
+<div id="page-wrapper">
+<!-- Header -->
+  <div id="header-wrapper">
+    <div id="header" class="container" style="padding-top: 100px;padding-bottom: 50px;">
+      <!-- Logo -->
+      <h1 id="logo"><%=link_to "Calligraphy Book", root_path%></h1>
+      <p>Add a new image</p>
+    </div>
+  </div>
 
-<%= render 'form' %>
+<!-- Features -->
+  <div id="features-wrapper">
+    <section id="features" class="container">
 
-<%= link_to 'Back', posts_path %>
+      <div class="row">
+        <div class="12u 12u(mobile)">
+          <!-- Feature -->
+            <section>
+              <%= render 'form' %>
+            </section>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Features -->
+
+  <div id="copyright" class="container">
+    <ul class="links">
+    <li><%= link_to 'Back', posts_path %></li>
+    <li><a href="http://github.com/vajradog">@vajradog</a></li>
+    </ul>
+  </div>
+</div>
+
+

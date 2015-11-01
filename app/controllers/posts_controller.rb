@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all.order('created_at DESC')
+    @posts = Post.all.order('created_at ASC')
   end
 
   def show
@@ -27,7 +27,10 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-     redirect_to @post, notice: 'Post was successfully updated.'
+     respond_to do |format|
+        format.html { redirect_to @post}
+        format.json { render json: @post }
+      end
     else
       render :edit
     end
