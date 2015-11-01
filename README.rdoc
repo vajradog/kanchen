@@ -1,7 +1,7 @@
 == What is this?
 
-So I was designing a book with lots of images. Instead of sending image title, descriptions etc. back and forth with the author I decided to create this app. Using scaffolds and best_in_place gem I was able to create the app under an hour.
+So I was designing a book with lots of images. Instead of sending image title, descriptions etc. back and forth with the author I decided to create this app. Using best_in_place gem I was able to create the app under an hour.
 
-Styled it with a free theme from codrops and threw in basic HTTP authentication for the author and me. So I basically upload a ton of images to cloudinary, create posts with placeholder title, translation and content. The author, using the super easy best_in_place gem, edits the placeholder titles and we're good.
+Styled it with a free theme from codrops and threw in basic HTTP authentication for the author and me. So I basically upload a ton of images to cloudinary, create posts with placeholder title, translation and content. The author, using the super easy best_in_place gem, edits the placeholder contents inplace on the page and we're good.
 
 If you want to use this project, go ahead. It has not tests, no nothing; just the simplest and quickest way to get my job done.
