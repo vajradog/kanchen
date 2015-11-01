@@ -20,10 +20,10 @@
             <section>
               <%= post.id %><%= image_tag post.image, class: "image featured", style: "margin-bottom: 10px;" %>
               <header>
-                <h3><%= best_in_place post, :title, place_holder: "TITLE IN ENGLISH: Click me to add content!" %></h3>
-                <p> <%= best_in_place post, :translation, place_holder: "TIBETAN PHONETICS: Click me to add content!" %></p>
+                <h3><%= best_in_place post, :title, place_holder: "Click here to add TITLE" %></h3>
+                <p> <%= best_in_place post, :translation, place_holder: "Click here to add TIBETAN PHONETICS" %></p>
               </header>
-              <p><%= best_in_place post, :content, place_holder: "OPTIONAL DESCRIPTION: Click me to add content!" %></p>
+              <p><%= best_in_place post, :content, place_holder: "Click here to add OPTIONAL DESCRIPTION" %></p>
               <p><%= link_to 'Delete this image', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
             </section>
         </div>
