@@ -1,28 +1,7 @@
-== README
+== What is this?
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+So I was designing a book with lots of images. Instead of sending image title, descriptions etc. back and forth with the author I decided to create this app. Using scaffolds and best_in_place gem I was able to create the app under an hour.
 
-Things you may want to cover:
+Styled it with a free theme from codrops and threw in basic HTTP authentication for the author and me. So I basically upload a ton of images to cloudinary, create posts with placeholder title, translation and content. The author, using the super easy best_in_place gem, edits the placeholder titles and we're good.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+If you want to use this project, go ahead. It has not tests, no nothing; just the simplest and quickest way to get my job done.
