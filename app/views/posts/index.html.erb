@@ -5,6 +5,17 @@
       <!-- Logo -->
       <h1 id="logo">Calligaphy Book</a></h1>
       <p>Click on the text you want to edit, type and just click outside or press enter.</p>
+
+       <%= form_for Post.new do |f| %>
+        <div class="field">
+          <%= f.label :image, "New Image" %><br>
+          <%= f.text_field :image %>
+        </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      <% end %>
+
     </div>
   </div>
 
@@ -41,15 +52,7 @@
     </ul>
   </div>
 
-  <%= form_for Post.new do |f| %>
-  <div class="field">
-    <%= f.label :image, "New Image" %><br>
-    <%= f.text_field :image %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+
 </div>
 
 
