@@ -5,17 +5,6 @@
       <!-- Logo -->
       <h1 id="logo">Calligaphy Book</a></h1>
       <p>Click on the text you want to edit, type and just click outside or press enter.</p>
-
-       <%= form_for Post.new do |f| %>
-        <div class="field">
-          <%= f.label :image, "New Image" %><br>
-          <%= f.text_field :image %>
-        </div>
-        <div class="actions">
-          <%= f.submit %>
-        </div>
-      <% end %>
-
     </div>
   </div>
 
@@ -26,10 +15,10 @@
       <div class="row">
 
         <% @posts.each do |post|%>
-        <div class="4u 12u(mobile)">
+        <div class="3u 12u(mobile)">
           <!-- Feature -->
             <section>
-              <%= post.id %><%= image_tag post.image, class: "image featured", style: "margin-bottom: 10px;" %>
+              <%= post.id %><%= image_tag(post.image, height: '300', class: "image featured", style: "margin-bottom: 10px;") %>
               <header>
                 <h3><%= best_in_place post, :title, place_holder: "Click here to add TITLE" %></h3>
                 <p> <%= best_in_place post, :translation, place_holder: "Click here to add TIBETAN PHONETICS" %></p>
