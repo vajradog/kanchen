@@ -18,7 +18,7 @@
         <div class="3u 12u(mobile)">
           <!-- Feature -->
             <section>
-              <%= post.id %><%= image_tag(post.image, height: '300', class: "image featured", style: "margin-bottom: 10px;") %>
+              <%= post.id %><%= image_tag(post.image, class: "image featured", style: "margin-bottom: 10px;") %>
               <header>
                 <h3><%= best_in_place post, :title, place_holder: "Click here to add TITLE" %></h3>
                 <p> <%= best_in_place post, :translation, place_holder: "Click here to add TIBETAN PHONETICS" %></p>
