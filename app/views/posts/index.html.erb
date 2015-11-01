@@ -40,6 +40,17 @@
     <li><a href="http://github.com/vajradog">@vajradog</a></li>
     </ul>
   </div>
+
+  <%= form_for Post.new do |f| %>
+  <div class="field">
+    <%= f.label :image, "New Image" %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
 </div>
+
 
 
