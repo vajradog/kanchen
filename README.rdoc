@@ -5,3 +5,5 @@ So I was designing a book with lots of images. Instead of sending image title, d
 Styled it with a free theme from codrops and threw in basic HTTP authentication for the author and me. So I basically upload a ton of images to cloudinary, create posts with placeholder title, translation and content. The author, using the super easy best_in_place gem, edits the placeholder contents inplace on the page and we're good.
 
 If you want to use this project, go ahead. It has not tests, no nothing; just the simplest and quickest way to get my job done.
+
+The app currently uses the super simple HTTP basic authentication. NOTE: Currently the user-name and password are in plain texts and in plan view, it is fine for my quick and temporary project but don't use for serious projects. Create and authentication system or use something like devise.
